@@ -18,8 +18,8 @@ public class Vehicle extends Asset {
     @Override
     public BigDecimal getValue () {
         LocalDate now = LocalDate.now();
-        BigDecimal bigYears = BigDecimal.valueOf(now.getYear()).subtract(BigDecimal.valueOf(getYear()));
-        int years = Integer.parseInt(String.format("%f", bigYears));
+        BigDecimal bigYears = new BigDecimal(now.getYear()).subtract(new BigDecimal(getYear()));
+        int years = bigYears.intValue();
 
         int vehicleCondition = 0;
         BigDecimal reducedValuePerYear = BigDecimal.ZERO;

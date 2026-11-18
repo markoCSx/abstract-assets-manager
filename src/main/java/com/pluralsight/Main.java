@@ -13,10 +13,13 @@ public class Main {
         house = new House("Main Base", "2026-04-29", new BigDecimal("1000000"), "North of nowhere", 1, 2000, 600);
         assets.add(house);
 
-        Vehicle vehicle = new Vehicle("Car", "1999-04-29", new BigDecimal("75000"), "Mazda|RX-3", 1974, 100000);
+        Vehicle vehicle = new Vehicle("Car", "1999-04-29", new BigDecimal("75000"), "Mazda|RX-3", 1974, 100001);
         assets.add(vehicle);
         vehicle = new Vehicle("Aerodyne", "2026-04-29", new BigDecimal("1000000"), "Zetatech|Prototype", 2026, 0);
         assets.add(vehicle);
+
+        Cash mattress = new Cash("Money", "2026-04-29", new BigDecimal("1000"));
+        assets.add(mattress);
 
         for ( Asset currentAsset : assets) {
             if (currentAsset instanceof House) {
@@ -30,8 +33,6 @@ public class Main {
             System.out.println(currentAsset.getOriginalCost());
             System.out.println(currentAsset.getValue());
         }
-
         //Asset test = new Asset();
-
     }
 }

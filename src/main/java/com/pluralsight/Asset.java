@@ -13,6 +13,10 @@ public class Asset {
         this.originalCost = originalCost;
     }
 
+    public Asset () {
+
+    }
+
     public BigDecimal getValue() {
         return originalCost;
     }

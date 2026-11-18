@@ -13,10 +13,6 @@ public abstract class Asset {
         this.originalCost = originalCost;
     }
 
-    public Asset () {
-
-    }
-
     public abstract BigDecimal getValue();
 
     public String getDescription() {
